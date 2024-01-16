@@ -1,18 +1,15 @@
 <script setup>
-import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
+import { RouterLink, RouterView } from "vue-router";
+import HelloWorld from "./components/HelloWorld.vue";
 </script>
 
 <template>
-
   <header>
-    <router-link to="/">Home</router-link>
-    <router-link to="/about">About</router-link>
+    <RouterLink to="/">Home</RouterLink>
+    <RouterLink to="/about">About</RouterLink>
   </header>
-
   <Transition name="route">
-
-    <RouterView  />
+    <RouterView />
   </Transition>
 </template>
 
@@ -77,22 +74,16 @@ nav a:first-of-type {
     padding: 1rem 0;
     margin-top: 1rem;
   }
-
 }
 
-.route-enter-from{
-
-  opacity:0;
+.route-enter-from {
+  opacity: 0;
   transform: translateX(100px);
-
 }
-
-.route-enter-active{
-  transition: all 0.6s ease;
+.route-enter-to {
+  opacity: 1;
 }
-
-.route-enter-to{
-
+.route-enter-active {
+  transition: all 0.4s ease;
 }
-
 </style>

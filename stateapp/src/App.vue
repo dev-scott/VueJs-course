@@ -2,9 +2,9 @@
 import { ref, provide } from "vue";
 import TestVue from "./components/Test.vue";
 
-const numbers = ref([1, 2, 3, 4, 5]);
 
-provide("numbers", numbers);
+
+
 </script>
 
 <template>

@@ -1,13 +1,11 @@
 <script setup>
+import useNumbers from "../composable/useNumbers";
 
-import {inject} from "vue"
-
-const numbers = inject("numbers")
-
+const { numbers } = useNumbers();
 </script>
 
 <template>
-  <div>it's test vue {{numbers}}  </div>
+  <div>it's test vue {{ numbers }}</div>
 </template>
 
 <style lang="scss" scoped></style>

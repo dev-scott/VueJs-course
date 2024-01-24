@@ -2,17 +2,18 @@
 import { ref, provide } from "vue";
 import TestVue from "./components/Test.vue";
 
+import { useCounterStore } from "./stores/counter";
 
-
-
+const counter = useCounterStore();
 </script>
 
 <template>
   <main>
     <div>
-      Hello App {{ numbers }}
-
-      <TestVue />
+      Hello App
+      {{ counter.count }}
+      <button @click="counter.increment()">Add count</button>
+      <!-- <TestVue /> -->
     </div>
   </main>
 </template>

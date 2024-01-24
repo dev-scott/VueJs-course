@@ -1,17 +1,18 @@
 <script setup>
-import { ref } from "vue";
+import { ref, provide } from "vue";
+import TestVue from "./components/Test.vue";
 
-const red = ref(0);
-const blue = ref(0);
-const green = ref(0);
+const numbers = ref([1, 2, 3, 4, 5]);
+
+provide("numbers", numbers);
 </script>
 
 <template>
-  <main :style="{ backgroundColor: `rgb(${red} , ${green} , ${blue})` }">
+  <main>
     <div>
-      <input type="number" v-model="red" placeholder="red" />
-      <input type="number" v-model="blue" placeholder="blue" />
-      <input type="number" v-model="green" placeholder="green" />
+      Hello App {{ numbers }}
+
+      <TestVue />
     </div>
   </main>
 </template>

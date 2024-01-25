@@ -4,15 +4,15 @@ import TestVue from "./components/Test.vue";
 
 import { useCounterStore } from "./stores/counter";
 
-const counter = useCounterStore();
+const { count } = useCounterStore();
 </script>
 
 <template>
   <main>
     <div>
-      Hello App
-      {{ counter.count }}
-      <button @click="counter.increment()">Add count</button>
+      Hello App {{ count }}
+      <!-- {{ counter.count }}
+      <button @click="counter.increment()">Add count</button> -->
       <!-- <TestVue /> -->
     </div>
   </main>
